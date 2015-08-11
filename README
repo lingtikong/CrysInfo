@@ -1,0 +1,20 @@
+Code to operate on xyz style configurations; the currently support operations are:
+1. Compare one or many configurations with respect a reference (the first read) configuration;
+   The RMSD is computed by:
+         rmsd = \sqrt(\sum_{i=1}^N (r_i - r_i^{ref})^2/N)
+   The lattices are rotated/translate to match with each other as much as possible.
+
+2. Compute symmetry related info of the input configurations, including:
+   1) Symmetry operations;
+   2) International lattice group symbol and number;
+   3) Schoenflies symbol and number;
+   4) Refine the crystal cell, assign Wyckoff positions;
+   5) Find the primitive cell;
+   6) Find irreducible k-points in the corresponding reciprocal space.
+
+
+spglib 1.0.3 is needed to evaluate the symmtry related info.
+
+
+Author: LT Kong
+Apr 2012
